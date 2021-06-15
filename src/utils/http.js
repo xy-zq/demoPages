@@ -28,12 +28,14 @@ axios.interceptors.request.use((config) => {
 		return config;
 	},
 	(error) => {
-		console.log('err>>>>>>>' + error) // for debug
+		console.warn('err>>>>>>>' + error) // for debug
 		return Promise.error(error);
 	});
 
 // 响应的拦截
 axios.interceptors.response.use((response) => {
+	console.warn('res>>>>>>>' + response) // show res
+	
 	if (response.status === 200) {
 		loading.close();
 		return Promise.resolve(response);
@@ -44,7 +46,7 @@ axios.interceptors.response.use((response) => {
 }, (error) => {
 	loading.close();
 	Toast.fail('请求错误');
-	console.log('err>>>>>>>' + error) // for debug
+	console.warn('err>>>>>>>' + error) // for debug
 	return Promise.reject(error)
 });
 

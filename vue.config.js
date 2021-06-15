@@ -1,4 +1,6 @@
-let glob = require('glob')
+let glob = require('glob');
+const path = require('path');
+
 
 //配置pages多页面获取当前文件夹下的html和js
 function getEntry(globPath) {

@@ -1,17 +1,32 @@
 import Vue from 'vue'
 import App from './index.vue'
-import router from './router.js'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../../assets/element-variables.scss'
-import { baseUrl } from '@/utils/config/index.js'
 
-if (window.platform) {
-  var url = `http://${window.platform.ip}:${window.platform.port}`;
-} else {
-  var url = baseUrl;
-}
+import VueRouter from 'vue-router'
+import meetingHistory from './meetingHistory.vue'
+import meetingDetail from './meetingDetail.vue'
 
+
+Vue.use(VueRouter)
+
+const routes = [
+  {
+    path: '/',
+    name: 'meetingHistory',
+    component: meetingHistory
+  },
+  {
+    path: '/detail',
+    name: 'meetingDetail',
+    component: meetingDetail
+  },
+]
+
+const router = new VueRouter({
+  routes
+})
 
 
 Vue.use(ElementUI)
