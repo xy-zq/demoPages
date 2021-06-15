@@ -1,0 +1,62 @@
+$--color-primary: rgb(0, 150, 136);
+$--color-success: #67c23a !default;
+$--color-warning: #FF9900 !default;
+$--color-danger: #FF0033 !default;
+$--color-info: #0099CC !default;
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+	/* 表头 */
+	.el-table__header-wrapper th {
+		background: rgb(241, 241, 241); 
+		color: #7c7c7c;
+	}
+	
+	/* 翻页 */
+	.el-pagination {
+		padding: 0;
+	}
+	
+	.el-input.el-input--mini.el-input--suffix {
+		margin: 0;
+	}
+	
+	tbody td {
+		padding-top: 7px;
+		padding-bottom: 7px;
+	}
+	
+	/* table边框颜色 */
+	.el-table--border:after,
+	.el-table--group:after,
+	.el-table:before {
+		background-color: #C0C4CC;
+	}
+	
+	.el-table--border,
+	.el-table--group {
+		border-color: #C0C4CC;
+	}
+	
+	.el-table td,
+	.el-table th.is-leaf {
+		border-bottom: 1px solid #C0C4CC; 
+	}
+	
+	.el-table--border th,
+	.el-table--border th.gutter:last-of-type {
+		border-bottom: 1px solid #C0C4CC;
+	}
+	
+	.el-table--border td,
+	.el-table--border th {
+		border-right: 1px solid #C0C4CC;
+	}
+	
+	.el-table--group::after,
+	.el-table--border::after,
+	.el-table::before {
+		background-color: #C0C4CC;
+	}
+	
